@@ -9,7 +9,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_s53x8mc', 'template_fwq8n7v', form.current, 'cXginQ40keRVEt1YV')
+        emailjs.sendForm('service_514thva', 'template_kbpdvk7', form.current, 'm3gNMVCwFhOArcGDf')
         e.target.reset();
     };
   
@@ -53,7 +53,7 @@ const Contact = () => {
 
                     <div className="contact__form-div contact__form-area">
                         <label className="contact__form-tag">Message</label>
-                        <textarea name="project" cols="30" rows="10" className="contact__form-input" placeholder="Write your message.."></textarea>
+                        <textarea name="message" cols="30" rows="10" className="contact__form-input" placeholder="Write your message.."></textarea>
                     </div>
 
                     <button href="#contact" className="button button--flex">
