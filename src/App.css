@@ -1,29 +1,25 @@
+/* fonty */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
-/*google font*/
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-/*variables css*/
-
+/* css */
 :root {
     --header-height: 3rem;
 
-    /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
+    /* colors */
+
     --hue: 0;
     --sat: 0%;
     --title-color: hsl(var(--hue), var(--sat), 20%);
-    --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+
+
+    --title-color-dark: hsl(75, 46%, 51%);
     --text-color: hsl(var(--hue), var(--sat), 46%);
     --body-color: hsl(var(--hue), var(--sat), 98%);
     --container-color: #fff;
 
-    /*fonts*/
+    /* static typography */
 
-    --body-font: "Poppins", sans-serif;
-
-    /*.5rem = 8px | 1rem = 16px ...*/
-
+    --body-font: "Nunito", sans-serif;
     --big-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -31,17 +27,15 @@
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
-    --tiny-font-size: 0.625rem;
-
-    /*font weight*/
-
+    --smallest-font-size: 0.625rem;
     --font-normal: 400;
     --font-medium: 500;
-    --font-semi-bold: 600;
+    --font-semibold: 600;
+    --font-bold: 700;
 
-    /*margenes bottom*/
+    /* bottom margins */
 
-    --mb-0-25: 0.25rem;
+    --mb-0-25: .25rem;
     --mb-0-5: 0.5rem;
     --mb-0-75: 0.75rem;
     --mb-1: 1rem;
@@ -50,13 +44,14 @@
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
 
-    /* z index*/
+    /* z index */
+
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
 }
 
-/* resp */
+/* resp typography  */
 
 @media screen and (max-width: 992px) {
     :root {
@@ -67,9 +62,11 @@
         --normal-font-size: 0.938rem;
         --small-font-size: 0.813rem;
         --smaller-font-size: 0.75rem;
+        --smallest-font-size: 0.625rem;
     }
 }
 
+/* base */
 
 * {
     margin: 0;
@@ -81,10 +78,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body,
-button,
-input,
-textarea {
+body, button, input, textarea {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
@@ -94,11 +88,9 @@ body {
     color: var(--text-color);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     color: var(--title-color);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-semibold);
 }
 
 ul {
@@ -120,15 +112,10 @@ img {
     height: auto;
 }
 
-/*css classes*/
+/* classes css */
 
 .section {
     padding: 6rem 0 2rem;
-}
-
-.section__title {
-    font-size: var(--h1-font-size);
-    color: var(--title-color);
 }
 
 .section__subtitle {
@@ -137,12 +124,11 @@ img {
     margin-bottom: 4rem;
 }
 
-.section__title,
-.section__subtitle {
+.section__title, .section__subtitle {
     text-align: center;
 }
 
-/*layout*/
+/* layout */
 
 .container {
     max-width: 968px;
@@ -155,7 +141,7 @@ img {
     gap: 1.5rem;
 }
 
-/*buttons*/
+/* buttons */
 
 .button {
     display: inline-block;
@@ -174,14 +160,14 @@ img {
     margin-left: var(--mb-0-5);
 }
 
+
 .button--flex {
     display: inline-flex;
     align-items: center;
 }
 
-/*brakepoints*/
+/* brake points */
 
-/* large */
 @media screen and (max-width: 992px) {
     .container {
         margin-left: var(--mb-1-5);
@@ -198,12 +184,10 @@ img {
     }
 }
 
-/*  medium  */
 @media screen and (max-width: 768px) {
     body {
-        margin: 0 0 var(--header-height) 0;
+        margin: 00 var(--header-height) 0;
     }
-
     .section {
         padding: 2rem 0 4rem;
     }
@@ -216,14 +200,14 @@ img {
 @media screen and (max-width: 576px) {
 }
 
-/* small  */
 @media screen and (max-width: 350px) {
     :root {
-        --big-font-size: 2.25rem;
+    --big-font-size: 2.25rem;
     }
 
     .container {
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
     }
+
 }
